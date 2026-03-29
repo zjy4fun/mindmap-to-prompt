@@ -357,7 +357,7 @@ svg.mindmap.grabbing { cursor: grabbing; }
   <!-- 格式选择 -->
   <select class="format-select" id="formatSelect" title="选择 Prompt 输出格式">
     <option value="markdown">📝 Markdown 格式</option>
-    <option value="xml">📦 XML 格式 (Claude)</option>
+    <option value="xml" selected>📦 XML 格式 (Claude)</option>
     <option value="numbered">🔢 编号列表格式</option>
   </select>
 
@@ -466,68 +466,9 @@ const promptOutput = document.getElementById('promptOutput');
 function createDefaultMap() {
   return {
     id: nextId++,
-    text: 'AI 写作助手',
+    text: '主题',
     collapsed: false,
-    children: [
-      {
-        id: nextId++,
-        text: '角色: AI 写作专家',
-        collapsed: false,
-        children: [
-          { id: nextId++, text: '精通中文写作', collapsed: false, children: [] },
-          { id: nextId++, text: '熟悉各类文体', collapsed: false, children: [] },
-          { id: nextId++, text: '具备 SEO 优化能力', collapsed: false, children: [] }
-        ]
-      },
-      {
-        id: nextId++,
-        text: '任务: 撰写文章',
-        collapsed: false,
-        children: [
-          { id: nextId++, text: '根据主题撰写高质量文章', collapsed: false, children: [] },
-          { id: nextId++, text: '确保内容原创且有深度', collapsed: false, children: [] },
-          {
-            id: nextId++,
-            text: '文章结构清晰',
-            collapsed: false,
-            children: [
-              { id: nextId++, text: '引言吸引人', collapsed: false, children: [] },
-              { id: nextId++, text: '正文逻辑通顺', collapsed: false, children: [] },
-              { id: nextId++, text: '结尾有总结和呼吁', collapsed: false, children: [] }
-            ]
-          }
-        ]
-      },
-      {
-        id: nextId++,
-        text: '约束: 写作规范',
-        collapsed: false,
-        children: [
-          { id: nextId++, text: '字数 800-1500 字', collapsed: false, children: [] },
-          { id: nextId++, text: '使用简体中文', collapsed: false, children: [] },
-          { id: nextId++, text: '避免使用过于专业的术语', collapsed: false, children: [] },
-          { id: nextId++, text: '语气友好、专业', collapsed: false, children: [] }
-        ]
-      },
-      {
-        id: nextId++,
-        text: '输出: 文章格式',
-        collapsed: false,
-        children: [
-          { id: nextId++, text: '使用 Markdown 格式', collapsed: false, children: [] },
-          { id: nextId++, text: '包含标题和小标题', collapsed: false, children: [] },
-          { id: nextId++, text: '适当使用列表和引用', collapsed: false, children: [] }
-        ]
-      },
-      {
-        id: nextId++,
-        text: '示例: 参考输出',
-        collapsed: false,
-        children: [
-          { id: nextId++, text: '# 标题\n## 引言\n内容...', collapsed: false, children: [] }
-        ]
-      }
-    ]
+    children: []
   };
 }
 
